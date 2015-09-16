@@ -7,9 +7,11 @@
 //
 
 #import "MoviesTableViewController.h"
+#import "GifHUD.h"
 
 @interface MoviesTableViewController ()
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
+- (void) errorCallback: (NSError*)error;
 @end
 
 @implementation MoviesTableViewController
@@ -26,15 +28,26 @@
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        id object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        self.movies = object[@"movies"];
-        [self.tableView reloadData];
-        //NSLog(@"%@", object);
+        if(connectionError) {
+            [self errorCallback:connectionError];
+        }else{
+            id object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            self.movies = object[@"movies"];
+            [self.tableView reloadData];
+            //NSLog(@"%@", object);
+        }
     }];
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(onRefresh) forControlEvents:UIControlEventValueChanged];
     [self.tableView insertSubview:self.refreshControl atIndex:0];
 }
+
+-(void)errorCallback:(NSError*)NSError{
+    NSLog(@"Network Error!");
+    [GiFHUD setGifWithImageName:@"pika.gif"];
+    [GiFHUD show];
+}
+
 
 - (void)onRefresh {
     NSString *url = @"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=ws32mxpd653h5c8zqfvksxw9";
@@ -68,7 +81,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSLog(@"Number of Movies = %lu", (unsigned long)self.movies.count);
+    //NSLog(@"Number of Movies = %lu", (unsigned long)self.movies.count);
     
     // Configure the cell...
     //UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil

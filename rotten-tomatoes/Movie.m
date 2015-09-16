@@ -38,7 +38,7 @@
             url = [url stringByReplacingCharactersInRange:range withString:@"https://content6.flixster.com/"];
         }
         self.imageURLLarge = url;
-        NSLog(@"url is ---------- %@", url);
+        //NSLog(@"url is ---------- %@", url);
         
     }
     return self;

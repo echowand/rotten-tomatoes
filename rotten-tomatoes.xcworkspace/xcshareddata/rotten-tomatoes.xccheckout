@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>60E35C32-28E3-4C88-9FEA-F50CF8AD8F9F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>rotten-tomatoes</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8D7D0FCA36FD91C2AC0BF903647C7EBD1B9954D2</key>
+		<string>https://github.com/echowand/rotten-tomatoes.git</string>
+		<key>DC4E282CF10A9E0821BC0F43C0841BFE16E4D267</key>
+		<string>https://github.com/problame/CSNotificationView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>rotten-tomatoes.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8D7D0FCA36FD91C2AC0BF903647C7EBD1B9954D2</key>
+		<string>..</string>
+		<key>DC4E282CF10A9E0821BC0F43C0841BFE16E4D267</key>
+		<string>..rotten-tomatoes/CSNotificationView</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/echowand/rotten-tomatoes.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8D7D0FCA36FD91C2AC0BF903647C7EBD1B9954D2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DC4E282CF10A9E0821BC0F43C0841BFE16E4D267</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CSNotificationView</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8D7D0FCA36FD91C2AC0BF903647C7EBD1B9954D2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>rotten-tomatoes</string>
+		</dict>
+	</array>
+</dict>
+</plist>
